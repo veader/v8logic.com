@@ -1,0 +1,9 @@
+html, body { background:#222;padding-top:60px;font-family:Georgia, 'Times Square'; }
+h1, p { text-align:center; }
+h1 { color:#444;font-size:4em;margin-bottom:20px; }
+p { color:#AAA; }
+a { color:#888;text-decoration:none; }
+p.footer { padding-top:30px;color:#000;font-size:0.8em; }
+p.footer a { color:#000; }
+p.footer a:hover { text-decoration:underline; }
+.blue { color:#66B; }
