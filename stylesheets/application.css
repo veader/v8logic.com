@@ -1,9 +1,10 @@
-html, body { background:#222;padding-top:60px;font-family:Georgia, 'Times Square'; }
+html, body { background:#222;padding-top:50px;font-family:Helvetica, Verdana, sans-serif; }
 h1, p { text-align:center; }
-h1 { color:#444;font-size:4em;margin-bottom:20px; }
+h1 { color:#444;font-size:4em;margin-bottom:20px;font-family:Georgia, 'Times Square', serif; }
 p { color:#AAA; }
 a { color:#888;text-decoration:none; }
-p.footer { padding-top:30px;color:#000;font-size:0.8em; }
+p.footer { padding-top:10px;color:#000;font-size:0.8em; }
 p.footer a { color:#000; }
 p.footer a:hover { text-decoration:underline; }
 .blue { color:#66B; }
+#apps { margin:20px auto;width:170px; }
