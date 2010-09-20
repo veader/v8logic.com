@@ -8,8 +8,9 @@ p.footer a { color:#000; }
 p.footer a:hover { text-decoration:underline; }
 .blue { color:#66B; }
 
-#apps { margin:20px auto;width:320px; }
-.app { margin:5px auto;clear:both; }
+#apps { margin:20px auto;width:350px; }
+.app_wrapper { margin:5px auto;background-image:url('../images/app_box.png');clear:both;width:350px;height:150px; }
+.app { padding:23px 20px; }
 .app h4 { padding-top:10px;font-weight:bold;font-size:1.3em;text-align:left;color:#DDD; }
 .app h4 a { color:#FFF; }
 .app a { color:#DDD; }
