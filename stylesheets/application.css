@@ -7,4 +7,13 @@ p.footer { padding-top:10px;color:#000;font-size:0.8em; }
 p.footer a { color:#000; }
 p.footer a:hover { text-decoration:underline; }
 .blue { color:#66B; }
-#apps { margin:20px auto;width:170px; }
+
+#apps { margin:20px auto;width:320px; }
+.app { margin:5px auto;clear:both; }
+.app h4 { padding-top:10px;font-weight:bold;font-size:1.3em;text-align:left;color:#DDD; }
+.app h4 a { color:#FFF; }
+.app a { color:#DDD; }
+.app a.app_store_link { font-size:0.9em;color:#666; }
+.app p { text-align:left; }
+.app .app_icon { float:left;margin-right:10px; }
+.app .app_icon a img { width:100px; }
