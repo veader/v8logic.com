@@ -13,10 +13,10 @@ role :web,          "v8logic.com"
 # role :db,         "v8logic.com, :primary => true
 
 deploy.task :symlink, :roles => :web do
-  run "mkdir -p #{release_path}/betas"
-  run "ln -nfs #{shared_path}/betas #{release_path}/betas"
-  # run <<-CMD
-  # CMD
+  run <<-CMD
+    mkdir -p #{latest_release}/betas &&
+    ln -nfs #{shared_path}/betas #{latest_release}/betas
+  CMD
 end
 
 deploy.task :restart, :roles => :web do
