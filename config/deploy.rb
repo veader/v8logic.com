@@ -12,6 +12,12 @@ role :web,          "v8logic.com"
 # role :app,        "v8logic.com"
 # role :db,         "v8logic.com, :primary => true
 
+deploy.task :symlink, :roles => :web do
+  run <<-CMD
+    ln -nfs #{shared_path}/betas #{release_path}
+  CMD
+end
+
 deploy.task :restart, :roles => :web do
   # DO NOTHING
 end
