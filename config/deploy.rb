@@ -14,7 +14,8 @@ role :web,          "v8logic.com"
 
 deploy.task :symlink, :roles => :web do
   run <<-CMD
-    ln -nfs #{shared_path}/betas #{release_path}
+    mkdir #{release_path}/betas
+    ln -nfs #{shared_path}/betas #{release_path}/betas
   CMD
 end
 
