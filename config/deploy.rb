@@ -1,6 +1,6 @@
 set :application,   'v8logic'
 set :scm,           'git'
-set :repository,    "git@veader.org:#{application}"
+set :repository,    'git@github.com:veader/V8Logic-Website.git'
 set :deploy_to,     "/var/www/#{application}"
 set :user,          'web'
 set :keep_releases, 3
