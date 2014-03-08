@@ -10,7 +10,7 @@ set :port,          22
 
 role :web,          'v8logic.com'
 
-# after 'deploy:symlink', :symlink_betas
+after 'deploy:symlink', :symlink_clients
 
 # task :symlink_betas, :roles => :web do
 #   run <<-CMD
@@ -18,6 +18,13 @@ role :web,          'v8logic.com'
 #     ln -nfs #{shared_path}/betas #{latest_release}/betas
 #   CMD
 # end
+
+task :symlink_clients, :roles => :web do
+  run <<-CMD
+    rm -f #{latest_release}/clients &&
+    ln -nfs #{shared_path}/clients #{latest_release}/clients
+  CMD
+end
 
 deploy.task :restart, :roles => :web do
   # DO NOTHING
