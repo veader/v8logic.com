@@ -5,47 +5,33 @@
     <meta name="viewport" content="user-scalable=yes">
 
     <title>V8 Logic</title>
-    <link rel="stylesheet" type="text/css" href="css/reset.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
     <style type="text/css" media="screen">
-      html { background-color:#222; }
       body {
         font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-        font-weight: 200;
+        font-weight: 300;
         line-height: 1.5;
         color:#BBB;
+        background-color: #222;
       }
       a { color:#888; }
-      #content { padding:50px; }
-      .column { width:40%;float:left; }
-      #left_col  { width:300px; }
-      #right_col { padding:10px 0 0 50px; }
-      #logo { width:250px; }
+      a:hover { color:#3aa9d2; }
+      h3 a { color:#DDD; }
+
+
+      #logo { width:200px; }
       .header {
         margin:0 auto;
-        width: 300px;
+        width: 200px;
       }
       .header h1 {
-        font-weight:400;font-size:5.0em;
+        font-weight:400;font-size:4.0em;
         text-align:center;
         line-height:0.9;
       }
       .tag { padding-top:10px;font-size:1.3em; }
-      .app_box { display:block;position:relative;height:100px;margin:8px 0; }
-      .app_box h2 { position:absolute;top:5px;left:100px;font-size:1.7em;color:#DDD; }
-      .app_box h2 a { text-decoration:none;color:#DDD; }
-      .app_box h2 a:hover { color:#FFF; }
-      .app_box img.app_icon { position:absolute;top:5px;left:5px;width:85px; }
-      .app_box span.app_tag { position:absolute;bottom:35px;left:100px;color:#999; }
-      .app_box span.app_links { position:absolute;bottom:15px;left:100px;color:#999;font-size:0.8em; }
-      .app_box div.app_store { position:absolute;right:10px;top:20px;display:none; }
-      .footer {
-        height:15px;
-        margin-top:10px;
-        font-size:0.7em;
-        color:#777;
-      }
-      .footer a { color:#AAA;text-decoration:none; }
-      .footer a:hover { color:#DDD; }
     </style>
 
     <script type="text/javascript">
@@ -59,120 +45,98 @@
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
     </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   </head>
 
   <body>
-    <div id="content">
-      <div class="column" id="left_col">
-        <div class="header">
-          <h1>
-            <img src="images/v8logo@1x.png" alt="V8" id="logo" class="retina">
-            Logic
-          </h1>
-        </div>
-      </div> <!-- column -->
-      <div class="column" id="right_col">
-        <div class="tag">
-          <p>
-            <script type="text/javascript">
-            /* <![CDATA[ */
-            function hivelogic_enkoder(){var kode=
-            "kode=\"oked\\\"=rnhg%@nrgh%_n@gr_h_%u_k@(qjjiCsut{4kxzz}(ogknbk.&B__Cxblb("+
-            "gbrsuoyzg@tn|}gFkk4jxxEu{mpyihCk>z\\\\\\\\&Rumoi&Xkw{kyz(bbb&zozrkbbYC(bng"+
-            "}t\\\\\\\\g&kkbjxbbDB(gOb5D(/AA(C~--lAxuo.6CoA.Buqkjr4tkzm3n/7oAC1/80\\\\1"+
-            "01~qCju4knixgzGo.711/uqkji4gnGx.z_o__3_q/j3C31uokq~j.4Bkumknrqtjz4Enuxkziq"+
-            "gjG4.kumknr7t@z-3A/>-_/_%{_*@>*ri+u@l>3?lrnhgo1qhwj>k.l,.f~n@gr1hkfudrFhgw"+
-            "Dl+0,>6ilf+3?f,@.54>;.{V@uwql1juiprkFudrFhgf+\\\\,00n0gr@h%_{{*>>@r*+i@u>l"+
-            "?3nlg+1rhhjokq4w>0.,5l~@.,n{g@1rkhufwdlD4+..r,hnfgd1Dk+u,wnl0\\\\00rgh@{.+"+
-            "l?nrgh1ohqjwkBnrgh1fkduDw+nrgh1ohqjwk04,=**,>>%@{**i>url+3@l>+?rnhgo1qhwj0"+
-            "k,4l>@.,5{~@.rnhgf1dkDu+w.l,4n.gr1hkfudwDl+\\\\,00n0gr@h.{l+n?gr1hhojqkwnB"+
-            "gr1hkfudwDn+gr1hhojqkw40=,**>,;\\\"=x''f;roi(0=i;k<do.eelgnhti;++{)=cokedc"+
-            ".ahCrdoAe(t)i3-i;(f<c)0+c1=82x;=+tSirgnf.orCmahCrdo(e)ck}do=ex\";x='';for("+
-            "i=0;i<(kode.length-1);i+=2){x+=kode.charAt(i+1)+kode.charAt(i)}kode=x+(i<k"+
-            "ode.length?kode.charAt(kode.length-1):'');"
-            ;var i,c,x;while(eval(kode));}hivelogic_enkoder();
-            /* ]]> */
-            </script>
-            build
-            <a href="https://www.apple.com/iphone/" title="Apple iPhone">iOS</a>
-            &amp;
-            <a href="https://www.rubyonrails.com/" title="Ruby on Rails">Rails</a>
-            apps.
-          </p>
-        </div> <!-- tag -->
+    <div class="container mt-5">
+      <div class="row justify-content-center">
 
-        <ul>
+        <div class="col-md-4">
+          <div class="header">
+            <h1>
+              <img src="images/v8logo@1x.png" alt="V8" id="logo" class="retina">
+              Logic
+            </h1>
+          </div> <!-- header -->
+        </div> <!-- left column -->
+
+        <div class="col-md-6">
+          <div class="tag">
+            <p>
+              <script type="text/javascript">
+              /* <![CDATA[ */
+              function hivelogic_enkoder(){var kode=
+              "kode=\"oked\\\"=rnhg%@nrgh%_n@gr_h_%u_k@(qjjiCsut{4kxzz}(ogknbk.&B__Cxblb("+
+              "gbrsuoyzg@tn|}gFkk4jxxEu{mpyihCk>z\\\\\\\\&Rumoi&Xkw{kyz(bbb&zozrkbbYC(bng"+
+              "}t\\\\\\\\g&kkbjxbbDB(gOb5D(/AA(C~--lAxuo.6CoA.Buqkjr4tkzm3n/7oAC1/80\\\\1"+
+              "01~qCju4knixgzGo.711/uqkji4gnGx.z_o__3_q/j3C31uokq~j.4Bkumknrqtjz4Enuxkziq"+
+              "gjG4.kumknr7t@z-3A/>-_/_%{_*@>*ri+u@l>3?lrnhgo1qhwj>k.l,.f~n@gr1hkfudrFhgw"+
+              "Dl+0,>6ilf+3?f,@.54>;.{V@uwql1juiprkFudrFhgf+\\\\,00n0gr@h%_{{*>>@r*+i@u>l"+
+              "?3nlg+1rhhjokq4w>0.,5l~@.,n{g@1rkhufwdlD4+..r,hnfgd1Dk+u,wnl0\\\\00rgh@{.+"+
+              "l?nrgh1ohqjwkBnrgh1fkduDw+nrgh1ohqjwk04,=**,>>%@{**i>url+3@l>+?rnhgo1qhwj0"+
+              "k,4l>@.,5{~@.rnhgf1dkDu+w.l,4n.gr1hkfudwDl+\\\\,00n0gr@h.{l+n?gr1hhojqkwnB"+
+              "gr1hkfudwDn+gr1hhojqkw40=,**>,;\\\"=x''f;roi(0=i;k<do.eelgnhti;++{)=cokedc"+
+              ".ahCrdoAe(t)i3-i;(f<c)0+c1=82x;=+tSirgnf.orCmahCrdo(e)ck}do=ex\";x='';for("+
+              "i=0;i<(kode.length-1);i+=2){x+=kode.charAt(i+1)+kode.charAt(i)}kode=x+(i<k"+
+              "ode.length?kode.charAt(kode.length-1):'');"
+              ;var i,c,x;while(eval(kode));}hivelogic_enkoder();
+              /* ]]> */
+              </script>
+              build
+              <a href="https://www.apple.com/iphone" title="Apple iPhone">iOS</a>
+              &amp;
+              <a href="https://rubyonrails.org" title="Ruby on Rails">Rails</a>
+              apps.
+            </p>
+          </div> <!-- tag -->
+
           <!-- QUICKSQUARE ----------------------------------------------- -->
-          <li class="app_box">
-            <h2><a href="http://quicksquareapp.com">quicksquare</a></h2>
+          <div class="media position-relative">
             <a href="https://itunes.apple.com/us/app/quicksquare/id520536757?mt=8">
-              <img src="images/quicksquare_icon@1x.png" class="app_icon retina">
+              <img src="images/quicksquare_icon@1x.png" class="mr-3 retina">
             </a>
-            <span class="app_tag">
-              A faster <a href="https://foursquare.com">foursquare</a> experience
-            </span>
-            <span class="app_links">
-              <a href="http://quicksquareapp.com">Website</a> |
-              <a href="https://itunes.apple.com/us/app/quicksquare/id520536757?mt=8">App Store</a>
-            </span>
-            <div class="app_store">
-              <a href="https://itunes.apple.com/us/app/quicksquare/id520536757?mt=8">
-                <img src="images/app_store.svg" id="app-store"/>
-              </a>
+            <div class="media-body">
+              <h3><a href="http://quicksquareapp.com">quicksquare</a></h3>
+              <p>
+                A faster <a href="https://foursquare.com">foursquare</a> experience. <br>
+
+                <a href="http://quicksquareapp.com">Website</a> |
+                <a href="https://itunes.apple.com/us/app/quicksquare/id520536757?mt=8">App Store</a>
+              </p>
             </div>
-          </li>
-          <!-- F/STATS --------------------------------------------------- -->
-          <li class="app_box">
-            <h2><a href="http://fstatsapp.com">f/stats</a></h2>
+          </div>
+
+          <!-- F/STATS ----------------------------------------------- -->
+          <div class="media position-relative">
             <a href="https://itunes.apple.com/us/app/f-stats/id360692773?mt=8">
-              <img src="images/fstats_icon@1x.png" class="app_icon retina">
+              <img src="images/fstats_icon@1x.png" class="mr-3 retina">
             </a>
-            <span class="app_tag">
-              <a href="https://flickr.com">Flickr</a> stats for iPhone
-            </span>
-            <span class="app_links">
-              <a href="http://fstatsapp.com">Website</a> |
-              <a href="https://itunes.apple.com/us/app/f-stats/id360692773?mt=8">App Store</a>
-            </span>
-            <div class="app_store">
-              <a href="https://itunes.apple.com/us/app/f-stats/id360692773?mt=8">
-                <img src="images/app_store.svg" id="app-store"/>
-              </a>
-            </div>
-          </li>
-          <!-- BIRDDOG --------------------------------------------------- -->
-          <li class="app_box" style="display:none;">
-            <h2><a href="http://birddogapp.com">BirdDog</a></h2>
-            <a href="https://itunes.apple.com/us/app/birddog/id359437429?mt=8">
-              <img src="images/birddog_icon@1x.png" class="app_icon retina">
-            </a>
-            <span class="app_tag">
-              <a href="http://scoutapp.com">Scout</a> monitoring on the go
-            </span>
-            <span class="app_links">
-              <a href="http://birddogapp.com">Website</a> |
-              <a href="https://itunes.apple.com/us/app/birddog/id359437429?mt=8">App Store</a>
-            </span>
-            <div class="app_store">
-              <a href="https://itunes.apple.com/us/app/birddog/id359437429?mt=8">
-                <img src="images/app_store.svg" id="app-store"/>
-              </a>
-            </div>
-          </li>
-        </ul>
+            <div class="media-body">
+              <h3><a href="http://fstatsapp.com">f/stats</a></h3>
+              <p>
+                <a href="https://flickr.com">Flickr</a> stats for iPhone <br>
 
-        <div class="footer">
-          <p>
-            &copy; 2010-2013
-            <a href="http://v8labs.com">V8 Labs, LLC</a>
-            dba
-            <a href="https://v8logic.com">V8 Logic</a>
-          </p>
-        </div> <!-- footer -->
-      </div> <!-- column -->
-    </div> <!-- content -->
+                <a href="http://fstatsapp.com">Website</a> |
+                <a href="https://itunes.apple.com/us/app/f-stats/id360692773?mt=8">App Store</a>
+              </p>
+            </div>
+          </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+          <div class="mt-4" id="footer">
+            <p>
+              &copy; 2010-2019
+              <a href="http://v8labs.com">V8 Labs, LLC</a>
+              dba
+              <a href="https://v8logic.com">V8 Logic</a>
+            </p>
+          </div> <!-- footer -->
+
+        </div> <!-- right column -->
+
+      </div> <!-- row -->
+    </div> <!-- container -->
+
     <script type="text/javascript" charset="utf-8">
       var is_retina = window.devicePixelRatio > 1 ? true : false;
       $(window).load(function() {
