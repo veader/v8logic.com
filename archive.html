@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="quicksquare">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>V8 Logic - Past Projects</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css" media="screen">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                <div class="header">
+                    <h1>
+                        <img src="images/v8logo@1x.png" alt="V8" id="logo" class="retina">
+                        Logic
+                    </h1>
+                </div> <!-- header -->
+            </div> <!-- left column -->
+
+            <div class="col-md-4">
+                <h2>Previous Projects</h2>
+
+                <!-- QUICKSQUARE ----------------------------------------------- -->
+                <div class="media position-relative app">            
+                    <img src="images/quicksquare_icon@1x.png" class="mr-3 retina">
+                    <div class="media-body">
+                        <h3>quicksquare</h3>
+                        <p>
+                            A faster <a href="https://foursquare.com">foursquare</a> experience. <br>    
+                        </p>
+                    </div>
+                </div>
+
+                <!-- BIRDDOG ----------------------------------------------- -->
+                <div class="media position-relative app">
+                    <img src="images/birddog_icon@1x.png" class="mr-3 retina">
+                    <div class="media-body">
+                        <h3>BirdDog</h3>
+                        <p>
+                            <a href="http://scoutapp.com/">Scout</a> monitoring on the go<br>
+                        </p>
+                    </div>
+                </div>
+        
+                <div class="mt-4" id="footer">
+                    <p>
+                      &copy; 2010-2022
+                      <a href="http://v8labs.com">V8 Labs, LLC</a>
+                      dba
+                      <a href="https://v8logic.com">V8 Logic</a>
+                    </p>
+                  </div> <!-- footer -->
+            </div> <!-- right column -->
+        </div> <!-- row -->
+    </div> <!-- container -->
+
+    <script type="text/javascript" charset="utf-8">
+    var is_retina = window.devicePixelRatio > 1 ? true : false;
+    $(window).load(function() {
+        if (is_retina) {
+            $('img.retina').attr('src',function(i,e) {
+            return e.replace("@1x","@2x");
+        });
+    }
+    }); 
+    </script>
+</body>
+</html>
